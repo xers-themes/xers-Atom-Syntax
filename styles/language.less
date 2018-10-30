@@ -1,11 +1,3 @@
-atom-text-editor .bracket-matcher .region {
-  border-bottom: 1px solid @green;
-}
-
-.syntax--comment {
-  color: @gray-4;
-}
-
 .syntax--constant {
   color: @orange;
 
@@ -51,10 +43,6 @@ atom-text-editor .bracket-matcher .region {
     .syntax--variable {
       color: @orange;
     }
-  }
-
-  &.syntax--dom, &.syntax--console {
-    color: @foreground;
   }
 }
 
@@ -105,7 +93,7 @@ atom-text-editor .bracket-matcher .region {
 }
 
 .syntax--invalid.syntax--illegal {
-  color: @background;
+  color: @background-color;
   background-color: @red;
 }
 
@@ -214,10 +202,6 @@ atom-text-editor .bracket-matcher .region {
       color: @yellow;
     }
 
-    &.syntax--comment {
-      color: @gray-4;
-    }
-
     &.syntax--entity {
       color: @blue;
     }
@@ -294,3 +278,32 @@ atom-text-editor .bracket-matcher .region {
     }
   }
 }
+
+
+
+
+
+// Bracket matcher
+atom-text-editor .bracket-matcher .region {
+  background: mix(@bracket-matcher-border-color, @background-color, 50%);
+	border: none;
+	box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+// Comments
+.syntax--comment {
+  color: @syntax-comment-color;
+	font-style: @syntax-comment-font-style;
+}
+
+
+// Keywords
+.syntax--storage,
+.syntax--console,
+.syntax--builtin {
+	color: @syntax-keyword-color;
+	font-style: @syntax-keyword-font-style;
+}
+
+
+// variable and constants

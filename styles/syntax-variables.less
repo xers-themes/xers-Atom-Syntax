@@ -1,16 +1,18 @@
 @import 'colors';
 
 // Base
-@background-color: #2B303B;
+@background-color: @slateGray;
+@syntax-background-color: @background-color;
 
 @foreground-color: @white;
+@syntax-text-color: @foreground-color;
 
-@foreground-color---dim-1: mix(@background-color, @foreground-color, 90%);
-@foreground-color---dimer-1: mix(@background-color, @foreground-color, 95%);
-@foreground-color---dim-2: mix(@background-color, @foreground-color, 80%);
-@foreground-color---dimer-2: mix(@background-color, @foreground-color, 85%);
-@foreground-color---dim-3: mix(@background-color, @foreground-color, 70%);
-@foreground-color---dimer-3: mix(@background-color, @foreground-color, 75%);
+@foreground-color--dim-1: mix(@background-color, @foreground-color, 90%);
+@foreground-color--dimer-1: mix(@background-color, @foreground-color, 95%);
+@foreground-color--dim-2: mix(@background-color, @foreground-color, 80%);
+@foreground-color--dimer-2: mix(@background-color, @foreground-color, 85%);
+@foreground-color--dim-3: mix(@background-color, @foreground-color, 70%);
+@foreground-color--dimer-3: mix(@background-color, @foreground-color, 75%);
 
 
 // General colors
@@ -23,15 +25,16 @@
 @wrap-guide-color: mix(@foreground-color, @background-color, 5%);
 @indent-guide-color: mix(@foreground, @wrap-guide-color, 8%);
 @invisible-character-color: @wrap-guide-color;
+@bracket-matcher-border-color: @purple;
 
 
 // For find and replace markers
-@find-result-border-color: @foreground-color---dim-1;
+@find-result-border-color: @foreground-color--dim-1;
 @find-result-border-color-selected: @cyan;
 
 
 // Gutter
-@gutter-text-color: @foreground-color---dim-1;
+@gutter-text-color: @foreground-color--dim-1;
 @gutter-text-color-selected: @pink;
 @gutter-background-color: @background-color;
 @gutter-background-color-selected: mix(@foreground-color, @gutter-background-color, 10%);
@@ -41,3 +44,14 @@
 @color-modified: @yellow;
 @color-removed: @red;
 @color-renamed: @blue;
+
+
+// // Syntax
+
+// Comments
+@syntax-comment-color: @foreground-color--dim-2;
+@syntax-comment-font-style: italic;
+
+// Keywords
+@syntax-keyword-color: @cyan;
+@syntax-keyword-font-style: italic;
