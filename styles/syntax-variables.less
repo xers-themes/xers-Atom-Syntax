@@ -1,0 +1,43 @@
+@import 'colors';
+
+// Base
+@background-color: #2B303B;
+
+@foreground-color: @white;
+
+@foreground-color---dim-1: mix(@background-color, @foreground-color, 90%);
+@foreground-color---dimer-1: mix(@background-color, @foreground-color, 95%);
+@foreground-color---dim-2: mix(@background-color, @foreground-color, 80%);
+@foreground-color---dimer-2: mix(@background-color, @foreground-color, 85%);
+@foreground-color---dim-3: mix(@background-color, @foreground-color, 70%);
+@foreground-color---dimer-3: mix(@background-color, @foreground-color, 75%);
+
+
+// General colors
+@text-color: @foreground-color;
+@cursor-color: @text-color;
+@selection-color: mix(@white, @background-color, 10%);
+
+
+// Guide
+@wrap-guide-color: mix(@foreground-color, @background-color, 5%);
+@indent-guide-color: mix(@foreground, @wrap-guide-color, 8%);
+@invisible-character-color: @wrap-guide-color;
+
+
+// For find and replace markers
+@find-result-border-color: @foreground-color---dim-1;
+@find-result-border-color-selected: @cyan;
+
+
+// Gutter
+@gutter-text-color: @foreground-color---dim-1;
+@gutter-text-color-selected: @pink;
+@gutter-background-color: @background-color;
+@gutter-background-color-selected: mix(@foreground-color, @gutter-background-color, 10%);
+
+// For git info. i.e. in the gutter
+@color-added: @green;
+@color-modified: @yellow;
+@color-removed: @red;
+@color-renamed: @blue;

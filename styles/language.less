@@ -1,0 +1,296 @@
+atom-text-editor .bracket-matcher .region {
+  border-bottom: 1px solid @green;
+}
+
+.syntax--comment {
+  color: @gray-4;
+}
+
+.syntax--constant {
+  color: @orange;
+
+  &.syntax--character {
+    &.syntax--escape {
+      color: @cyan;
+    }
+  }
+
+  &.syntax--numeric {
+    color: @orange;
+  }
+
+  &.syntax--other {
+    &.syntax--color {
+      color: @cyan;
+    }
+
+    &.syntax--symbol {
+      color: @green;
+    }
+  }
+}
+
+.syntax--flowtype {
+  &.syntax--class.syntax--support {
+    color: @yellow;
+  }
+
+  &.syntax--primitive, &.syntax--builtin, &.syntax--existential {
+    color: @yellow;
+  }
+}
+
+.syntax--meta.syntax--flowtype {
+  .syntax--type.syntax--storage.syntax--function {
+    color: @foreground;
+  }
+}
+
+.syntax--js {
+  &.syntax--parameters {
+    .syntax--variable {
+      color: @orange;
+    }
+  }
+
+  &.syntax--dom, &.syntax--console {
+    color: @foreground;
+  }
+}
+
+.syntax--jsx {
+  &.syntax--component.syntax--class {
+    color: @red;
+  }
+}
+
+.syntax--entity {
+  &.syntax--name {
+    &.syntax--class {
+      color: @yellow;
+    }
+
+    &.syntax--function {
+      color: @blue;
+    }
+
+    &.syntax--section {
+      color: @blue;
+    }
+
+    &.syntax--tag {
+      color: @red;
+    }
+
+    &.syntax--type {
+      &.syntax--class {
+        color: @yellow;
+      }
+    }
+  }
+
+  &.syntax--other {
+    &.syntax--attribute-name {
+      color: @orange;
+
+      &.syntax--id {
+        color: @blue;
+      }
+    }
+
+    &.syntax--inherited-class {
+      color: @green;
+    }
+  }
+}
+
+.syntax--invalid.syntax--illegal {
+  color: @background;
+  background-color: @red;
+}
+
+.syntax--keyword {
+  color: @pink;
+
+  &.syntax--operator {
+    color: @foreground;
+  }
+
+  &.syntax--module.syntax--js {
+    color: @cyan;
+  }
+
+  &.syntax--other {
+    &.syntax--special-method {
+      color: @blue;
+    }
+
+    &.syntax--unit {
+      color: @orange;
+    }
+  }
+}
+
+.syntax--markup {
+  &.syntax--bold {
+    font-weight: bold;
+    color: @yellow;
+  }
+
+  &.syntax--changed {
+    color: @pink;
+  }
+
+  &.syntax--deleted {
+    color: @red;
+  }
+
+  &.syntax--heading {
+    color: @blue;
+  }
+
+  &.syntax--inserted {
+    color: @green;
+  }
+
+  &.syntax--italic {
+    font-style: italic;
+    color: @pink;
+  }
+
+  &.syntax--list {
+    color: @red;
+  }
+
+  &.syntax--quote {
+    color: @orange;
+  }
+
+  &.syntax--raw {
+    &.syntax--inline {
+      color: @green;
+    }
+  }
+}
+
+.syntax--meta {
+  &.syntax--class {
+    color: @white-2;
+  }
+
+  &.syntax--link {
+    color: @orange;
+  }
+
+  &.syntax--require {
+    color: @blue;
+  }
+
+  &.syntax--selector {
+    color: @pink;
+  }
+
+  &.syntax--separator {
+    color: @foreground;
+    ckground:color, @gray-2;
+  }
+}
+
+.syntax--none {
+  color: @foreground;
+}
+
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--array,
+    &.syntax--parameters,
+    &.syntax--string,
+    &.syntax--variable {
+      color: @foreground;
+    }
+
+    &.syntax--bold {
+      font-weight: bold;
+      color: @yellow;
+    }
+
+    &.syntax--comment {
+      color: @gray-4;
+    }
+
+    &.syntax--entity {
+      color: @blue;
+    }
+
+    &.syntax--italic {
+      font-style: italic;
+      color: @pink;
+    }
+  }
+
+  &.syntax--section {
+    &.syntax--embedded {
+      color: @brown;
+    }
+  }
+}
+
+.syntax--storage {
+  color: @pink;
+}
+
+.syntax--string {
+  color: @green;
+
+  &.syntax--other {
+    &.syntax--link {
+      color: @red;
+    }
+  }
+
+  &.syntax--regexp {
+    color: @cyan;
+  }
+}
+
+.syntax--support {
+  &.syntax--class {
+    color: @yellow;
+  }
+
+  &.syntax--function {
+    color: @cyan;
+
+    &.syntax--any-method {
+      color: @blue;
+    }
+  }
+
+  &.syntax--module {
+    .syntax--keyword.syntax--operator {
+      color: @yellow;
+    }
+  }
+}
+
+.syntax--variable {
+  color: @red;
+
+  &.syntax--js {
+    color: @foreground;
+
+    &.syntax--this {
+      color: @red;
+    }
+  }
+
+  &.syntax--interpolation {
+    color: @brown;
+  }
+
+  &.syntax--parameter {
+    &.syntax--function {
+      color: @foreground;
+    }
+  }
+}

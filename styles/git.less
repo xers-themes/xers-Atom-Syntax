@@ -1,0 +1,35 @@
+.github-HunkView-line.is-added {
+  .github-HunkView-lineContent {
+    background: @background;
+    color: @green;
+  }
+  .github-HunkView-plusMinus {
+    color: lighten(@green, 5%);
+  }
+}
+
+.github-HunkView-line.is-deleted {
+  .github-HunkView-lineContent {
+    background: @background;
+    color: @red;
+  }
+  .github-HunkView-plusMinus {
+    color: lighten(@red, 5%);
+  }
+}
+
+.github-FilePatchView:focus {
+  .github-HunkView-line.is-added.is-selected .github-HunkView-lineContent {
+    background: @selection-color;
+    color: @green;
+  }
+
+  .github-HunkView-line.is-deleted.is-selected .github-HunkView-lineContent {
+    background: @selection-color;
+    color: @red;
+  }
+}
+
+.github-FilePatchView:focus .github-HunkView-line.is-selected .github-HunkView-lineNumber {
+  background: @selection-color;
+}
