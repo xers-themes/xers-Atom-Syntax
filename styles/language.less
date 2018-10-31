@@ -7,10 +7,6 @@
     }
   }
 
-  &.syntax--numeric {
-    color: @orange;
-  }
-
   &.syntax--other {
     &.syntax--color {
       color: @cyan;
@@ -46,9 +42,6 @@
 
 .syntax--entity {
   &.syntax--name {
-    &.syntax--class {
-      color: @yellow;
-    }
     &.syntax--section {
       color: @blue;
     }
@@ -58,9 +51,6 @@
     }
 
     &.syntax--type {
-      &.syntax--class {
-        color: @yellow;
-      }
     }
   }
 
@@ -225,10 +215,6 @@
 }
 
 .syntax--support {
-  &.syntax--class {
-    color: @yellow;
-  }
-
   &.syntax--function {
     color: @cyan;
 
@@ -277,7 +263,8 @@ atom-text-editor .bracket-matcher .region {
 // Keywords
 .syntax--storage,
 .syntax--console,
-.syntax--builtin {
+.syntax--builtin,
+.syntax--keyword {
 	color: @syntax-keyword-color;
 	font-style: @syntax-keyword-font-style;
 }
@@ -288,6 +275,10 @@ atom-text-editor .bracket-matcher .region {
 	color: @syntax-variable-color;
 }
 
+// Functions
+.syntax--name.syntax--function {
+	color: @syntax-function-color;
+}
 
 // Object stuff
 .syntax--property {
@@ -302,8 +293,25 @@ atom-text-editor .bracket-matcher .region {
 	color: @syntax-property-color;
 }
 
-
 // String
 .syntax--string {
 	color: @syntax-string-color;
+}
+
+// Boolean
+.syntax--boolean {
+	color: @syntax-boolean-color;
+	font-style: @syntax-boolean-font-style;
+}
+
+
+// Class
+.syntax--class {
+	color: @syntax-class-color;
+}
+
+
+// Numbers
+.syntax--numeric {
+	color: @syntax-number-color;
 }

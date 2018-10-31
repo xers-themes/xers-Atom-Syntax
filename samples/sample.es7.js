@@ -3,6 +3,7 @@ let number = 534;
 const object = {};
 function bar() {
 	// YO!
+	return true;
 };
 
 string.substr(1, 5);
