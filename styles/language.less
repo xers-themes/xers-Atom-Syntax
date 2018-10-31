@@ -38,14 +38,6 @@
   }
 }
 
-.syntax--js {
-  &.syntax--parameters {
-    .syntax--variable {
-      color: @orange;
-    }
-  }
-}
-
 .syntax--jsx {
   &.syntax--component.syntax--class {
     color: @red;
@@ -57,11 +49,6 @@
     &.syntax--class {
       color: @yellow;
     }
-
-    &.syntax--function {
-      color: @blue;
-    }
-
     &.syntax--section {
       color: @blue;
     }
@@ -258,16 +245,6 @@
 }
 
 .syntax--variable {
-  color: @red;
-
-  &.syntax--js {
-    color: @foreground;
-
-    &.syntax--this {
-      color: @red;
-    }
-  }
-
   &.syntax--interpolation {
     color: @brown;
   }
@@ -307,3 +284,26 @@ atom-text-editor .bracket-matcher .region {
 
 
 // variable and constants
+.syntax--variable {
+	color: @syntax-variable-color;
+}
+
+
+// Object stuff
+.syntax--property {
+	color: @syntax-property-color;
+}
+.syntax--method-call > .syntax--function {
+	color: @syntax-method-color;
+	font-weight: @syntax-method-font-weight;
+	font-style: @syntax-method-font-style;
+}
+.syntax--key > .syntax--unquoted {
+	color: @syntax-property-color;
+}
+
+
+// String
+.syntax--string {
+	color: @syntax-string-color;
+}
