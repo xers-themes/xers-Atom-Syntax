@@ -279,6 +279,11 @@ atom-text-editor .bracket-matcher .region {
 .syntax--name.syntax--function {
 	color: @syntax-function-color;
 }
+.syntax--function-call > .syntax--function {
+	color: @syntax-method-color;
+	font-weight: @syntax-method-font-weight;
+	font-style: @syntax-method-font-style;
+}
 
 // Object stuff
 .syntax--property {
@@ -304,12 +309,10 @@ atom-text-editor .bracket-matcher .region {
 	font-style: @syntax-boolean-font-style;
 }
 
-
 // Class
 .syntax--class {
 	color: @syntax-class-color;
 }
-
 
 // Numbers
 .syntax--numeric {

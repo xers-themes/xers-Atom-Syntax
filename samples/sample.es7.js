@@ -16,3 +16,7 @@ Object.defineProperty(object, 'property1', {
 
 object.property1 = 77;
 console.log(object.property1);
+
+async doSomeAsyncStuff() {
+		await doSomeNormalStuff();
+}
