@@ -5,6 +5,7 @@
 @syntax-background-color: @background-color;
 
 @foreground-color: @white;
+@foreground: @foreground-color;
 @syntax-text-color: @foreground-color;
 
 @foreground-color--dim-1: mix(@background-color, @foreground-color, 90%);
@@ -62,6 +63,7 @@
 
 // Function
 @syntax-function-color: @syntax-variable-color;
+@syntax-parameters-color: mix(white, @blue, 30%);
 
 // Objects
 @syntax-property-color: @hotpink;
@@ -73,10 +75,17 @@
 // Strings
 @syntax-string-color: @red;
 
+
 // Booleans
 @syntax-boolean-color: @green;
 @syntax-boolean-font-weight: normal;
 @syntax-boolean-font-style: italic;
+
+
+// Booleans
+@syntax-null-color: @red;
+@syntax-null-font-weight: normal;
+@syntax-null-font-style: italic;
 
 
 // Classes

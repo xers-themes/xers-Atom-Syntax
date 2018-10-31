@@ -267,6 +267,15 @@ atom-text-editor .bracket-matcher .region {
 .syntax--keyword {
 	color: @syntax-keyword-color;
 	font-style: @syntax-keyword-font-style;
+
+	&.syntax--operator {
+		color: @syntax-method-color;
+	}
+
+	&.syntax--arithmetic, &.syntax--assignment, &.syntax--relational, &.syntax--logical, &.syntax--comparison {
+		font-style: normal;
+		color: @foreground;
+	}
 }
 
 
@@ -276,8 +285,13 @@ atom-text-editor .bracket-matcher .region {
 }
 
 // Functions
-.syntax--name.syntax--function {
-	color: @syntax-function-color;
+.syntax--function {
+	&.syntax--name {
+		color: @syntax-function-color;
+	}
+	&.syntax--parameters > .syntax--variable {
+		color: @syntax-parameters-color;
+	}
 }
 .syntax--function-call > .syntax--function {
 	color: @syntax-method-color;
@@ -289,10 +303,14 @@ atom-text-editor .bracket-matcher .region {
 .syntax--property {
 	color: @syntax-property-color;
 }
-.syntax--method-call > .syntax--function {
+.syntax--method-call > .syntax--function,
+.syntax--console.syntax--function {
 	color: @syntax-method-color;
 	font-weight: @syntax-method-font-weight;
 	font-style: @syntax-method-font-style;
+}
+.syntax--with-arguments > .syntax--variable {
+	color: @syntax-parameters-color;
 }
 .syntax--key > .syntax--unquoted {
 	color: @syntax-property-color;
@@ -307,6 +325,12 @@ atom-text-editor .bracket-matcher .region {
 .syntax--boolean {
 	color: @syntax-boolean-color;
 	font-style: @syntax-boolean-font-style;
+}
+
+// Null and Undefined
+.syntax--null {
+	color: @syntax-null-color;
+	font-style: @syntax-null-font-style;
 }
 
 // Class
