@@ -169,8 +169,13 @@ atom-text-editor .bracket-matcher .region {
 }
 // Boolean
 .syntax--boolean {
-	color: @syntax-js-boolean-color;
 	font-style: @syntax-js-boolean-font-style;
+	&.syntax--true {
+			color: @syntax-js-boolean-true-color;
+	}
+	&.syntax--false {
+		color: @syntax-js-boolean-false-color;
+	}
 }
 // Null and Undefined
 .syntax--null, .syntax--undefined {
@@ -257,8 +262,6 @@ atom-text-editor .bracket-matcher .region {
 	}
 	// Boolean
 	&.syntax--boolean {
-		color: @syntax-js-boolean-color;
-		font-style: @syntax-js-boolean-font-style;
 	}
 	// Null and Undefined
 	&.syntax--null, .syntax--undefined {
@@ -281,8 +284,13 @@ atom-text-editor .bracket-matcher .region {
 		font-style: normal;
 	}
 	// Selectors
-	&.syntax--class {
+	&.syntax--class,
+	&.syntax--property-list > .syntax--attribute-name > .syntax--definition,
+	&.syntax--reference {
 		color: @syntax-css-class-color;
+	}
+	&.syntax--reference {
+		color: @syntax-css-refrence-color;
 	}
 	&.syntax--tag {
 		color: @syntax-css-tag-color;
@@ -365,10 +373,19 @@ atom-text-editor .bracket-matcher .region {
 	&.syntax--doctype {
 		color: @syntax-html-doctype-color;
 	}
-	.syntax--tag:not(.syntax--doctype) {
+	.syntax--tag:not(.syntax--doctype):not(.syntax--scss) {
 		color: @syntax-tag-color;
 	}
-	.syntax--attribute-name {
+	.syntax--attribute-name:not(.syntax--css) {
 		color: @syntax-html-attribute-color;
+	}
+	.syntax--punctuation:not(.syntax--css) {
+		color: @foreground-color;
+	}
+	.syntax--directive {
+		color: @syntax-html-directive-color;
+	}
+	.syntax--quoted {
+		color: @syntax-html-attribute-value-color;
 	}
 }

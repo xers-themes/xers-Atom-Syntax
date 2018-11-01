@@ -52,6 +52,9 @@
 // Comments
 @syntax-comment-color: @foreground-color--dim-2;
 @syntax-comment-font-style: italic;
+// Keywords
+@syntax-keyword-color: @purple;
+@syntax-keyword-font-style: italic;
 // Variables
 @syntax-variable-color: @cyan;
 // Import
@@ -68,59 +71,60 @@
 @syntax-method-font-weight: bold;
 @syntax-method-font-style: normal;
 // Tags
-@syntax-tag-color: @syntax-variable-color;
+@syntax-tag-color: @purple;
+//String
+@syntax-string-color: @red;
+// Boolean
+@syntax-boolean-true-color: @green;
+@syntax-boolean-false-color: @red;
+@syntax-boolean-font-weight: normal;
+@syntax-boolean-font-style: italic;
+// Numbers
+@syntax-number-color: @cyan;
+
 
 // JS
-// Keywords
-@syntax-js-keyword-color: @purple;
-@syntax-js-keyword-font-style: italic;
-// Variables
-@syntax-js-variable-color: @cyan;
-// Function
+@syntax-js-keyword-color: @syntax-keyword-color;
+@syntax-js-keyword-font-style: @syntax-keyword-font-style;
+@syntax-js-variable-color: @syntax-variable-color;
 @syntax-js-function-color: @syntax-function-color;
-@syntax-js-parameters-color: mix(white, @blue, 30%);
-// Objects
-@syntax-js-property-color: @hotpink;
-@syntax-js-method-color: @syntax-function-call-color;
-@syntax-js-method-font-weight: bold;
-@syntax-js-method-font-style: normal;
-// Strings
-@syntax-js-string-color: @red;
-// Booleans
-@syntax-js-boolean-color: @green;
-@syntax-js-boolean-font-weight: normal;
-@syntax-js-boolean-font-style: italic;
-// Booleans
+@syntax-js-parameters-color: @syntax-parameters-color;
+@syntax-js-property-color: @syntax-property-color;
+@syntax-js-method-color: @syntax-method-color;
+@syntax-js-method-font-weight: @syntax-method-font-weight;
+@syntax-js-method-font-style: @syntax-method-font-style;
+@syntax-js-string-color: @syntax-string-color;
+@syntax-js-boolean-true-color: @syntax-boolean-true-color;
+@syntax-js-boolean-false-color: @syntax-boolean-false-color;
+@syntax-js-boolean-font-weight: @syntax-boolean-font-weight;
+@syntax-js-boolean-font-style: @syntax-boolean-font-style;
 @syntax-js-null-color: @red;
 @syntax-js-null-font-weight: normal;
 @syntax-js-null-font-style: italic;
-// Classes
 @syntax-js-class-color: @yellow;
-// Numbers
-@syntax-js-number-color: @cyan;
+@syntax-js-number-color: @syntax-number-color;
 
 
 // CSS
-// Selectors
 @syntax-css-class-color: @cyan;
 @syntax-css-tag-color: @blue;
 @syntax-css-psedo-class-color: @blue;
 @syntax-css-psedo-class-font-style: italic;
-// Property
 @syntax-css-property-color: @hotpink;
-// Value
 @syntax-css-value-color: @purple;
 @syntax-css-value-numberic-color: @blue;
 @syntax-css-value-quoted-color: @red;
 @syntax-css-important-color: @red;
 @syntax-css-important-font-weight: bold;
 @syntax-css-important-text-decoration: underline;
-// AtRule
 @syntax-css-atrule-color: @yellow;
 @syntax-css-atrule-font-style: italic;
 @syntax-css-import-src: @pink;
+@syntax-css-refrence-color: @gold;
 
 
 // HTML
 @syntax-html-doctype-color: @foreground-color--dim-3;
-@syntax-html-attribute-color: @syntax-property-color;
+@syntax-html-attribute-color: @gold;
+@syntax-html-directive-color: @syntax-variable-color;
+@syntax-html-attribute-value-color: @syntax-property-color;
