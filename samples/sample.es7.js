@@ -234,7 +234,7 @@
 		}
 
 		const propertyName = path[path.length - 1];
-		
+
 		let base = obj;
 
 		for (let i = 0, len = path.length - 1; i < len; ++i)
@@ -253,4 +253,7 @@
 		idMap.set(0, self);
 		reverseMap.set(self, 0);
 	}
+}
+async ihu() {
+
 }

@@ -264,7 +264,9 @@ atom-text-editor .bracket-matcher .region {
 .syntax--storage,
 .syntax--console,
 .syntax--builtin,
-.syntax--keyword {
+.syntax--keyword,
+.syntax--prototype,
+.syntax--prototype.syntax--variable, {
 	color: @syntax-keyword-color;
 	font-style: @syntax-keyword-font-style;
 
@@ -328,7 +330,7 @@ atom-text-editor .bracket-matcher .region {
 }
 
 // Null and Undefined
-.syntax--null {
+.syntax--null, .syntax--undefined {
 	color: @syntax-null-color;
 	font-style: @syntax-null-font-style;
 }
