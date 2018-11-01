@@ -52,45 +52,69 @@
 // Comments
 @syntax-comment-color: @foreground-color--dim-2;
 @syntax-comment-font-style: italic;
-
-// Keywords
-@syntax-keyword-color: @purple;
-@syntax-keyword-font-style: italic;
-
-
 // Variables
 @syntax-variable-color: @cyan;
-
+// Import
+@syntax-css-import-src: @pink;
 // Function
-@syntax-function-color: @syntax-variable-color;
+@syntax-function-color: @gold;
+@syntax-function-call-font-weight: bold;
+@syntax-function-call-color: @gold;
+@syntax-function-call-font-style: normal;
 @syntax-parameters-color: mix(white, @blue, 30%);
-
 // Objects
 @syntax-property-color: @hotpink;
-@syntax-method-color: @blue;
+@syntax-method-color: @syntax-function-call-color;
 @syntax-method-font-weight: bold;
 @syntax-method-font-style: normal;
 
 
+// JS
+// Keywords
+@syntax-js-keyword-color: @purple;
+@syntax-js-keyword-font-style: italic;
+// Variables
+@syntax-js-variable-color: @cyan;
+// Function
+@syntax-js-function-color: @syntax-function-color;
+@syntax-js-parameters-color: mix(white, @blue, 30%);
+// Objects
+@syntax-js-property-color: @hotpink;
+@syntax-js-method-color: @syntax-function-call-color;
+@syntax-js-method-font-weight: bold;
+@syntax-js-method-font-style: normal;
 // Strings
-@syntax-string-color: @red;
-
-
+@syntax-js-string-color: @red;
 // Booleans
-@syntax-boolean-color: @green;
-@syntax-boolean-font-weight: normal;
-@syntax-boolean-font-style: italic;
-
-
+@syntax-js-boolean-color: @green;
+@syntax-js-boolean-font-weight: normal;
+@syntax-js-boolean-font-style: italic;
 // Booleans
-@syntax-null-color: @red;
-@syntax-null-font-weight: normal;
-@syntax-null-font-style: italic;
-
-
+@syntax-js-null-color: @red;
+@syntax-js-null-font-weight: normal;
+@syntax-js-null-font-style: italic;
 // Classes
-@syntax-class-color: @yellow;
-
-
+@syntax-js-class-color: @yellow;
 // Numbers
-@syntax-number-color: @cyan;
+@syntax-js-number-color: @cyan;
+
+
+// CSS
+// Selectors
+@syntax-css-class-color: @cyan;
+@syntax-css-tag-color: @blue;
+@syntax-css-psedo-class-color: @blue;
+@syntax-css-psedo-class-font-style: italic;
+// Property
+@syntax-css-property-color: @hotpink;
+// Value
+@syntax-css-value-color: @purple;
+@syntax-css-value-numberic-color: @blue;
+@syntax-css-value-quoted-color: @red;
+@syntax-css-important-color: @red;
+@syntax-css-important-font-weight: bold;
+@syntax-css-important-text-decoration: underline;
+// AtRule
+@syntax-css-atrule-color: @yellow;
+@syntax-css-atrule-font-style: italic;
+@syntax-css-import-src: @pink;
