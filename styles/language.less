@@ -358,3 +358,17 @@ atom-text-editor .bracket-matcher .region {
 		font-style: @syntax-function-call-font-style;
 	}
 }
+
+
+// html
+.syntax--html {
+	&.syntax--doctype {
+		color: @syntax-html-doctype-color;
+	}
+	.syntax--tag:not(.syntax--doctype) {
+		color: @syntax-tag-color;
+	}
+	.syntax--attribute-name {
+		color: @syntax-html-attribute-color;
+	}
+}
