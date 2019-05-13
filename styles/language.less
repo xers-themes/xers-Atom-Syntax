@@ -1,104 +1,120 @@
-.syntax--flowtype {
-  &.syntax--class.syntax--support {
-    color: @yellow;
-  }
+.syntax {
+	&--process {
+		font-style: italic;
+	}
 
-  &.syntax--primitive, &.syntax--builtin, &.syntax--existential {
-    color: @yellow;
-  }
+	&--instance {
+		font-weight: bold;
+		color: @syntax-function-color;
+	}
+
+	&--new {
+		color: @syntax-keyword-color;
+	}
+}
+
+
+.syntax--flowtype {
+	&.syntax--class.syntax--support {
+		color: @yellow;
+	}
+
+	&.syntax--primitive, &.syntax--builtin, &.syntax--existential {
+		color: @yellow;
+	}
 }
 
 .syntax--meta.syntax--flowtype {
-  .syntax--type.syntax--storage.syntax--function {
-    color: @foreground;
-  }
+	.syntax--type.syntax--storage.syntax--function {
+		color: @foreground;
+	}
 }
 
 .syntax--jsx {
-  &.syntax--component.syntax--class {
-    color: @red;
-  }
+	&.syntax--component.syntax--class {
+		color: @red;
+	}
 }
 
 .syntax--invalid.syntax--illegal {
-  color: @background-color;
-  background-color: @red;
+	color: @background-color;
+	background-color: @red;
 }
 
 .syntax--markup {
-  &.syntax--bold {
-    font-weight: bold;
-    color: @yellow;
-  }
+	&.syntax--bold {
+		font-weight: bold;
+		color: @yellow;
+	}
 
-  &.syntax--changed {
-    color: @pink;
-  }
+	&.syntax--changed {
+		color: @pink;
+	}
 
-  &.syntax--deleted {
-    color: @red;
-  }
+	&.syntax--deleted {
+		color: @red;
+	}
 
-  &.syntax--heading {
-    color: @blue;
-  }
+	&.syntax--heading {
+		color: @blue;
+	}
 
-  &.syntax--inserted {
-    color: @green;
-  }
+	&.syntax--inserted {
+		color: @green;
+	}
 
-  &.syntax--italic {
-    font-style: italic;
-    color: @pink;
-  }
+	&.syntax--italic {
+		font-style: italic;
+		color: @pink;
+	}
 
-  &.syntax--list {
-    color: @red;
-  }
+	&.syntax--list {
+		color: @red;
+	}
 
-  &.syntax--quote {
-    color: @orange;
-  }
+	&.syntax--quote {
+		color: @orange;
+	}
 
-  &.syntax--raw {
-    &.syntax--inline {
-      color: @green;
-    }
-  }
+	&.syntax--raw {
+		&.syntax--inline {
+			color: @green;
+		}
+	}
 }
 
 .syntax--meta {
-  &.syntax--class {
-    color: @white-2;
-  }
+	&.syntax--class {
+		color: @white-2;
+	}
 
-  &.syntax--link {
-    color: @orange;
-  }
+	&.syntax--link {
+		color: @orange;
+	}
 
-  &.syntax--require {
-    color: @blue;
-  }
+	&.syntax--require {
+		color: @blue;
+	}
 
-  &.syntax--selector {
-    color: @pink;
-  }
+	&.syntax--selector {
+		color: @pink;
+	}
 
-  &.syntax--separator {
-    color: @foreground;
-    ckground:color, @gray-2;
-  }
+	&.syntax--separator {
+		color: @foreground;
+		ckground:color, @gray-2;
+	}
 }
 
 .syntax--none {
-  color: @foreground;
+	color: @foreground;
 }
 
 
 
 // Bracket matcher
 atom-text-editor .bracket-matcher .region {
-  background: mix(@bracket-matcher-border-color, @background-color, 50%);
+	background: mix(@bracket-matcher-border-color, @background-color, 50%);
 	border: none;
 	box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
 }
@@ -110,7 +126,7 @@ atom-text-editor .bracket-matcher .region {
 }
 // Comments
 .syntax--comment {
-  color: @syntax-comment-color;
+	color: @syntax-comment-color;
 	font-style: @syntax-comment-font-style;
 }
 .syntax--storage,
@@ -200,22 +216,28 @@ atom-text-editor .bracket-matcher .region {
 
 // JS
 .syntax--js {
+	&.syntax--arrow {
+		.syntax--begin .syntax--brace.syntax--round,
+		.syntax--end .syntax--brace.syntax--round {
+			color: @syntax-js-function-color;
+		}
+	}
+
 	// Keywords
 	&.syntax--storage,
 	&.syntax--console,
 	&.syntax--builtin,
-	&.syntax--keyword,
-	&.syntax--prototype,
-	&.syntax--prototype.syntax--variable, {
+	&.syntax--keyword {
 		color: @syntax-js-keyword-color;
 		font-style: @syntax-js-keyword-font-style;
-		&.syntax--operator {
-			color: @syntax-js-method-color;
-		}
 		&.syntax--arithmetic, &.syntax--assignment, &.syntax--relational, &.syntax--logical, &.syntax--comparison {
 			font-style: normal;
 			color: @foreground;
 		}
+	}
+	// Prototype
+	&.syntax--prototype {
+		color: @syntax-js-prototype-color;
 	}
 	// variable and constants
 	&.syntax--variable {
@@ -242,7 +264,6 @@ atom-text-editor .bracket-matcher .region {
 	}
 	// Object stuff
 	&.syntax--property {
-		color: @syntax-js-property-color;
 	}
 	&.syntax--method-call > .syntax--function,
 	&.syntax--console.syntax--function {

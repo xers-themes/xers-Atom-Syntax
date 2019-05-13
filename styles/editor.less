@@ -1,56 +1,56 @@
 atom-text-editor {
-  background-color: @background-color;
-  color: @text-color;
+	color: @text-color;
 
-  .cursor {
-    border-color: @cursor-color;
-  }
+	.cursor {
+		border-color: @cursor-color;
+	}
 
-  .wrap-guide {
-    background-color: @wrap-guide-color;
-  }
+	.wrap-guide {
+		background-color: @wrap-guide-color;
+	}
 
-  .indent-guide {
-    color: @indent-guide-color;
-  }
+	.indent-guide {
+		color: @indent-guide-color;
+	}
 
-  .invisible-character {
-    color: @invisible-character-color;
-  }
+	.invisible-character {
+		color: @invisible-character-color;
+	}
 
-  .selection .region {
-    background-color: @selection-color;
-  }
+	.selection .region {
+		background-color: @selection-color;
+	}
 
-  .search-results .region {
-    .syntax--marker {
-      background-color: transparent;
-      border: @find-result-border-color;
-    }
+	.search-results .region {
+		.syntax--marker {
+			background-color: transparent;
+			border: @find-result-border-color;
+		}
 
-    .syntax--marker.current-result {
-      border: @find-result-border-color-selected;
-    }
-  }
+		.syntax--marker.current-result {
+			border: @find-result-border-color-selected;
+		}
+	}
 
-  .gutter {
-    background-color: @gutter-background-color;
-    color: @gutter-text-color;
+	.gutter {
+		background-color: @gutter-background-color;
+		color: @gutter-text-color;
+		font-weight: 300;
 
-    .line-number {
-      &.cursor-line {
-        background-color: @gutter-background-color-selected;
-        color: @gutter-text-color-selected;
-      }
+		.line-number {
+			&.cursor-line {
+				background-color: @gutter-background-color-selected;
+				color: @gutter-text-color-selected;
+			}
 
-      &.cursor-line-no-selection {
-        color: @gutter-text-color-selected;
-      }
-    }
+			&.cursor-line-no-selection {
+				color: @gutter-text-color-selected;
+			}
+		}
 
 		.line-number.bracket-matcher {
 			background-color: @selection-color;
 			color: @pink;
 		}
-  }
+	}
 }

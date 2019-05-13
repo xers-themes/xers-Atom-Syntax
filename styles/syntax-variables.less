@@ -2,9 +2,11 @@
 
 // Base
 @background-color: @slateGray;
+@background-color--dim-1: mix(black, @background-color, 10%);
+@background-color--tint-1: mix(white, @background-color, 10%);
 @syntax-background-color: @background-color;
 
-@foreground-color: @white;
+@foreground-color: @grain;
 @foreground: @foreground-color;
 @syntax-text-color: @foreground-color;
 
@@ -13,13 +15,13 @@
 @foreground-color--dim-2: mix(@background-color, @foreground-color, 80%);
 @foreground-color--dimer-2: mix(@background-color, @foreground-color, 85%);
 @foreground-color--dim-3: mix(@background-color, @foreground-color, 70%);
-@foreground-color--dimer-3: mix(@background-color, @foreground-color, 75%);
+@foreground-color--dimer-3: mix(@background-color, @foreground-color, 60%);
 
 
 // General colors
 @text-color: @foreground-color;
 @cursor-color: @text-color;
-@selection-color: mix(@white, @background-color, 10%);
+@selection-color: @background-color--tint-1;
 
 
 // Guide
@@ -35,9 +37,9 @@
 
 
 // Gutter
-@gutter-text-color: @foreground-color--dim-1;
+@gutter-text-color: @foreground-color--dimer-3;
 @gutter-text-color-selected: @pink;
-@gutter-background-color: @background-color;
+@gutter-background-color: transparent;
 @gutter-background-color-selected: mix(@foreground-color, @gutter-background-color, 10%);
 
 // For git info. i.e. in the gutter
@@ -53,18 +55,19 @@
 @syntax-comment-color: @foreground-color--dim-2;
 @syntax-comment-font-style: italic;
 // Keywords
-@syntax-keyword-color: @purple;
+@syntax-keyword-color: @orange;
 @syntax-keyword-font-style: italic;
 // Variables
 @syntax-variable-color: @cyan;
 // Import
 @syntax-css-import-src: @pink;
 // Function
-@syntax-function-color: @gold;
+@syntax-function-color: @red;
 @syntax-function-call-font-weight: bold;
-@syntax-function-call-color: @gold;
+@syntax-function-call-color: @syntax-function-color;
 @syntax-function-call-font-style: normal;
-@syntax-parameters-color: mix(white, @blue, 30%);
+@syntax-parameters-color: @syntax-variable-color;
+@syntax-js-prototype-color: @purple;
 // Objects
 @syntax-property-color: @hotpink;
 @syntax-method-color: @syntax-function-call-color;
@@ -73,7 +76,7 @@
 // Tags
 @syntax-tag-color: @purple;
 //String
-@syntax-string-color: @red;
+@syntax-string-color: @hazel;
 // Boolean
 @syntax-boolean-true-color: @green;
 @syntax-boolean-false-color: @red;
@@ -101,7 +104,7 @@
 @syntax-js-null-color: @red;
 @syntax-js-null-font-weight: normal;
 @syntax-js-null-font-style: italic;
-@syntax-js-class-color: @yellow;
+@syntax-js-class-color: @blue;
 @syntax-js-number-color: @syntax-number-color;
 
 
@@ -110,7 +113,7 @@
 @syntax-css-tag-color: @blue;
 @syntax-css-psedo-class-color: @blue;
 @syntax-css-psedo-class-font-style: italic;
-@syntax-css-property-color: @hotpink;
+@syntax-css-property-color: @orange;
 @syntax-css-value-color: @purple;
 @syntax-css-value-numberic-color: @blue;
 @syntax-css-value-quoted-color: @red;
