@@ -1,7 +1,7 @@
 {
 	"name": "xers-syntax",
 	"theme": "syntax",
-	"version": "1.1.1",
+	"version": "2.0.0",
 	"description": "Atom Syntax theme that actually helps you through coding 😎🐻",
 	"keywords": [
 		"syntax",
